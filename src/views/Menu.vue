@@ -1,14 +1,14 @@
 <template>
   <v-container>
     <v-row>
-      <v-col offset-md="1" md="5">
-        <h1>Menu items</h1>
+      <v-col offset-md="1" md="10">
+        <h1>Products</h1>
         <div class="pa-2" id="info">
           <v-simple-table id="menu-table">
             <thead>
               <tr>
                 <th></th>
-                <th class="text-left" style="width:70%">Name of time</th>
+                <th class="text-left" style="width:70%">Name of the item</th>
                 <th class="text-left" style="width:100px">Price</th>
                 <th class="text-left" style="width:100px">Add to basket</th>
               </tr>

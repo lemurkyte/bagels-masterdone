@@ -30,7 +30,7 @@ import Navigation from './components/Navigation.vue';
 
 <style lang="scss">
 main{
-  background-image: url('./assets/bagels.jpg');
+  background-image: url('./assets/marble.jpg');
   background-size: cover;
 }
 .col h1 {

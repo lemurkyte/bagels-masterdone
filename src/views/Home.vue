@@ -12,6 +12,7 @@
         </div>
       </v-flex>
     </v-layout>
+    
         <v-layout align-center class="info_box" row wrap>
       <v-flex sm2 xs12 offset-sm1>
         <h1>
