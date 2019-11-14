@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Menu from './views/Menu.vue'
 import Admin from './views/Admin.vue'
 import Orders from './views/Orders.vue'
+import Basket from './views/Basket.vue'
 import AddNewItems from './components/admin/AddNewItems.vue'
 import Login from './components/admin/Login.vue'
+
+
+
 
 import firebase from 'firebase'
 import 'firebase/firestore'
@@ -24,10 +27,11 @@ const router = new Router({
       name: 'home',
       component: Home
     },
+  
     {
-      path: '/menu',
-      name: 'menu',
-      component: Menu
+      path: '/basket',
+      name: 'basket',
+      component: Basket
     },
     {
       path: '/about',

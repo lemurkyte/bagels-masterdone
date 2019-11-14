@@ -18,7 +18,7 @@ export default new Vuex.Store({
     addCheckoutItem: (state, basketItems) => {
       dbOrders.add({
         orderNumber:2,
-        status: "not started",
+        status: "incomplete",
         orderLines: state.basketItems
       })
     },

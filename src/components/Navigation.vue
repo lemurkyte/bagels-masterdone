@@ -30,9 +30,6 @@
          <router-link tag="li" to="/">
           <v-icon color="orange">home</v-icon>Home
         </router-link>
-        <router-link tag="li" to="/menu">
-          <v-icon color="orange">restaurant_menu</v-icon>Menu
-        </router-link>
 
         <router-link tag="li" to="/about">
           <v-icon color="inprogress">info</v-icon>About
@@ -45,6 +42,9 @@
         </router-link>
         <router-link tag="li" v-if="currentUser" to="/orders" class="complete--text">
           <v-icon color="complete">assignment</v-icon>Orders
+        </router-link>
+        <router-link tag="li" to="/basket">
+          <v-icon color="inprogress">shopping_cart</v-icon>Basket
         </router-link>
        </v-list-tile>
      </v-list>
@@ -61,10 +61,11 @@
       <v-spacer></v-spacer>
       <v-btn text class="hidden-sm-and-down"  to="/">Home</v-btn>
       <v-btn text class="hidden-sm-and-down" to="/about">About</v-btn>
-      <v-btn text class="hidden-sm-and-down" to="/menu">Menu</v-btn>
       <v-btn text class="hidden-sm-and-down" to="/login">Login</v-btn>
       <v-btn text class="hidden-sm-and-down" v-if="currentUser" to="/admin">Admin</v-btn>
       <v-btn text class="hidden-sm-and-down" v-if="currentUser" to="/orders">Orders</v-btn>
+      <v-btn text class="hidden-sm-and-down" to="/basket"><v-icon color="black">shopping_cart</v-icon></v-btn>
+      
       
 
       <div class="text-center hidden-sm-and-down " v-if="currentUser">
@@ -79,11 +80,13 @@
           text
           v-on="on"
         >
-          My account
+        <v-icon color="black">person</v-icon>
         </v-btn>
       </template>
+      
 
       <v-card tile>
+        
         <v-list>
           <v-list-item>
             <v-list-item-avatar>
@@ -96,6 +99,7 @@
 
           </v-list-item>
         </v-list>
+        
 
         <v-divider></v-divider>
 
@@ -103,9 +107,9 @@
           <v-list-item>
             <v-list-item-action>
 
-                    <v-btn  text to="/menu">
+                    <v-btn  text to="/home">
                     <v-icon left >mdi-settings-outline</v-icon>Settings</v-btn>
-                    <v-btn text to="/menu">
+                    <v-btn text to="/home">
                     <v-icon left color="red" >mdi-heart</v-icon>Wishlist</v-btn>
                     <v-btn text to="/login" @click.prevent="signOut()">
                     <v-icon left >mdi-logout</v-icon>Sign out</v-btn>
@@ -116,9 +120,7 @@
       </v-card>
     </v-menu>
   </div>
-
-
-        
+  
 
     </v-toolbar>
   </div>

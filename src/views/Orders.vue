@@ -86,7 +86,7 @@
                 
 
                 <td>
-                     <div id="status_box" class="orange"> {{ item.status }} </div>
+                     <div id="status_box" @click="switchStage(item.id)" v-bind:class="item.status"> {{ item.status }} </div>
                 </td>
                 <td>
                   <v-btn small text v-on:click="addToBasket(item)">
@@ -143,6 +143,34 @@ export default {
 
         })
     },
+
+    switchStage(id) {
+      ;debugger
+      /*
+      dbOrders.doc(id).update({status:"incomplete"}) // {status:"complete"}
+        .then(() => {
+
+      })*/
+    
+      let selectedOrderItem = this.orderItems
+      .filter(item => item.id === id) [0];
+      
+      if (selectedOrderItem.status === "inprogress") {
+        dbOrders.doc(id).update({status:"complete"})
+        .then(() => {
+        })
+        }
+      else if (selectedOrderItem.status === "incomplete") {
+        dbOrders.doc(id).update({status:"inprogress"})
+        .then(() => {
+        })
+      }
+      else if (selectedOrderItem.status === "complete") {
+        dbOrders.doc(id).update({status:"incomplete"})
+        .then(() => {
+        })
+        }
+  },
     addToBasket(item) {
   /*    if (this.basket.find(itemInArray => item.name === itemInArray.name)) {
         item = this.basket.find(itemInArray => item.name === itemInArray.name);

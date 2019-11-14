@@ -1,24 +1,27 @@
 <template>
-  <v-app id="app">
+  <v-app fluid id="app">
     <navigation />
-    
-    <v-content>
-      <v-container>
-        <router-view></router-view>
    
+    <v-content  fluid id>
+      <v-container  fluid id>
+        <router-view></router-view>
+    
+      <Footer />
       </v-container>
     </v-content>
-    
+   
   </v-app>
 </template>
 
 <script>
 
 import Navigation from './components/Navigation.vue';
+import Footer from './components/Footer.vue';
 
   export default {
      components: {
      Navigation,
+     Footer
   },
     name: 'App',
     props: {
