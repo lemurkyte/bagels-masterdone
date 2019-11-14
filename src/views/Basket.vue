@@ -2,7 +2,7 @@
   <v-container> 
     <v-row>
           <v-col offset-md="7" md="4">
-        <h1>Current basket</h1>
+        <h1>Current Cart</h1>
         <div class="pa-2" id="info">
           <v-simple-table id="menu-table" v-if="basket.length > 0">
             <thead>
@@ -15,9 +15,9 @@
             <tbody>
               <tr v-for="item in basket" :key="item.name">
                 <td>
-                  <v-icon color="orange" @click="increaseQtn(item)">add_box</v-icon>
+                  <v-icon color="grey" @click="increaseQtn(item)">add_box</v-icon>
                   {{ item.quantity }}
-                  <v-icon color="orange" @click="decreaseQtn(item)">indeterminate_check_box</v-icon>
+                  <v-icon color="grey" @click="decreaseQtn(item)">indeterminate_check_box</v-icon>
                 </td>
                 <td>{{ item.name }}</td>
                 <td>{{item.price}}</td>
@@ -26,7 +26,7 @@
           </v-simple-table>
 
           <v-simple-table v-else>
-            <p>The basket is empty</p>
+            <p>The cart is empty</p>
           </v-simple-table>
 
           <v-divider></v-divider>
@@ -46,7 +46,7 @@
           </v-row>
           <v-row style="margin:0;">
             <v-spacer></v-spacer>
-            <v-btn color="orange" @click="addCheckoutItem()">Checkout</v-btn>
+            <v-btn color="grey" @click="addCheckoutItem()">Checkout</v-btn>
           </v-row>
         </div>
       </v-col>

@@ -17,10 +17,10 @@
                     required>
 
                     </v-text-field>
-                    <v-btn color="complete" @click.prevent="signIn()">
+                    <v-btn color="white" @click.prevent="signIn()">
                         Login
                     </v-btn>
-                    <v-btn color="incomplete" @click.prevent="signOut()">
+                    <v-btn color="grey" @click.prevent="signOut()">
                         SignOut
                     </v-btn>
                 </div>

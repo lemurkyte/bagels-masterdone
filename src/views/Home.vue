@@ -1,60 +1,40 @@
-<template>
-  <v-container  fluid id>
+<template >
+<div >
+     <v-container fluid id="BgPreview">
+    </v-container>
 
-     <div fluid id="BgPreview">
-        <v-container fluid id="imgContainer">
-        </v-container>
-    </div>
-
-    <v-row>
-      <v-col offset-md="1" md="10">
-        <h1>Products</h1>
-        <div class="pa-2" id="info">
-          <v-simple-table id="menu-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th class="text-left" style="width:70%">Name of the item</th>
-                <th class="text-left" style="width:100px">Price</th>
-                <th class="text-left" style="width:100px">Add to basket</th>
-              </tr>
-            </thead>
-
-
-            <tbody>
-              <tr v-for="item in menuItems" :key="item.name">
+  <v-container >
+    <v-row  >
+      <v-col id="menu-table" >
+              <tr v-for="item in menuItems" :key="item.name" class="product">
                 <td id="td_menuitem_img">
-                  <v-img v-bind:src="item.image"></v-img>
+                  <v-img height="150px" v-bind:src="item.image"></v-img>
                 </td>
                 <td>
+                   <router-link to="/product-details" >
                   <span id="td_name">{{ item.name }}</span>
+                     </router-link>
                   <br />
                   <span id="menu_item_description">{{ item.description }}</span>
                 </td>
-                <td>{{ item.price }}</td>
+                <td>{{ item.price }} DKK</td>
                 <td>
-                  <v-btn small text v-on:click="addToBasket(item)">
-                    <v-icon color="orange">add_box</v-icon>
+                  <v-btn small text v-on:click="addToBasket(item)">ADD TO CART  <br>
+                    <v-icon color="black">shopping_cart</v-icon> 
                   </v-btn>
                 </td>
               </tr>
-            </tbody>
-
-          </v-simple-table>
-        </div>
       </v-col>
-
-      <!-- BASKET -->
-
-         <!-- END OF THE BASKET -->
     </v-row>
   </v-container>
+  </div>
 </template>
+
 
 <script>
 
-
 import {dbMenuAdd} from '../../firebase'
+
 
 export default {
   data() {
@@ -134,13 +114,34 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     height: 60vh;
-  
+    
 }
-
+a {  text-decoration: none;}
+#menu-table {
+   width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+ .product {
+    width: 300px;
+    background-color: #fff;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 1em;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+  }
 .col h1 {
   @include infobox_mixin(
     5px,
-    map-get($colorz, white),
+    map-get($colorz, rgb(73, 73, 73)),
     10px,
     5px,
     map-get($colorz, white)
@@ -156,30 +157,29 @@ export default {
 #info {
   background-color: white;
 }
-tr th {
-  font-weight: 300;
-}
+
 #td_name {
-  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: normal;
 }
 tr td {
-  padding: 10px 10px 10px 16px;
+  padding: 10px 0 5px 0;
+  margin: 0 0 0 20px;
+  
 }
 #menu_item_description {
-  font-style: italic;
-  font-weight: 300;
-  color: map-get($colorz, darkgrey);
-  font-size: 13px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 14px;
+    font-style: italic;
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
 }
 #td_menuitem_img{
-  max-width: 40px;
-  max-height: 40px;
-  padding:0;
+  max-width: 110px;
+  max-height: 110px;
+  margin: 0 0 60px 0;
 }
-#basket_checkout {
-  font-size: 13px;
-}
-#basket_checkout p:first-child {
-  line-height: 2px;
-}
+
 </style>

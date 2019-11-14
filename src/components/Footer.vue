@@ -1,31 +1,32 @@
  <template>
- 
-  <v-container fluid id="bg">
-      <v-layout  column>
-            <v-flex fluid id  xs12 xl3 lg3 md4>
-                
-                <h3 class="mb-3">HOME FRAGRANCES</h3>
-                <span class="mb-3">+45 91 85 17 31 <br> INFO@HOMEFRAGRANCES@GMAIL.COM <br> DÆMNINGEN 35A <br> 7100 VEJLE</span>
-                
-            </v-flex>
+  <v-container  fluid id="bg">
+    <v-row >
+      <v-col offset="md-5">
+        <h3 class="mb-3" >HOME FRAGRANCES</h3>
+          <span class="mb-3">+45 91 85 17 31</span>  <br>
+          <span class="mb-3">INFO@HOMEFRAGRANCES@GMAIL.COM </span> <br>
+          <span class="mb-3"> DÆMNINGEN 35A <br> 7100 VEJLE  </span>
+        </v-col>
+      </v-row>
             
-        </v-layout>
-        <hr class="mb-1">
-        <v-layout>
-            <v-dialog
+        <hr  class="mb-1">
+      
+            <v-dialog 
+            
       v-model="dialog"
       width="500">
-      <template v-slot:activator="{ on }">
-        <v-btn flat color="blue" id="privacy"
-          v-on="on">Privacy Policy
-        </v-btn>
-        
-      </template>
+      <template  v-slot:activator="{ on }">
+        <v-btn  flat color="grey" id="privacy"
+          v-on="on"> Privacy Policy
+        </v-btn >
+      </template >
 
-      <v-card>
-        <v-card-title
-          class="headline blue lighten-2 white--text"
-          primary-title >
+      <v-card  >
+        <v-card-title 
+        
+          class="headline grey white--text "
+          primary-title 
+          >
           Privacy Policy
         </v-card-title>
         <v-card-text>
@@ -67,9 +68,10 @@ and service(s). Company Name does not knowingly collect information from
 
         <v-divider></v-divider>
 
-        <v-card-actions>
-          <v-spacer></v-spacer>
+        <v-card-actions >
+          <v-spacer ></v-spacer>
           <v-btn
+          
             color="primary"
             flat
             @click="dialog = false"
@@ -81,13 +83,9 @@ and service(s). Company Name does not knowingly collect information from
     </v-dialog>
  >
             <v-spacer></v-spacer>
-          	  <span>&copy;Designed by Ugne &nbsp; 2019</span>
-      </v-layout>
-   <!-- 
-      <cookie-consent/>
-      -->
+          	  <span > &copy;Copyright: Home Fragrances &nbsp; 2019</span>
+    
   </v-container>
-  
  </template>
 
 
@@ -103,9 +101,7 @@ and service(s). Company Name does not knowingly collect information from
  
 
 <style lang="scss" scoped>
-//@import "./node_modules/vue-cookieconsent-component/src/scss/cookie-consent";
-//@import "./node_modules/vue-cookieconsent-component/src/scss/cookie-consent-bottom";
-//@import "./node_modules/vue-cookieconsent-component/src/scss/cookie-consent-transition";
+
 #bg {
 background-color: rgb(231, 231, 231);
 }

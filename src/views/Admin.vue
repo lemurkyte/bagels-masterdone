@@ -6,7 +6,7 @@
     >
       {{ updatedText }}
       <v-btn
-        color="pink"
+        color="grey"
         text
         @click="updatedSuccess = false"
       >
@@ -23,7 +23,7 @@
             <thead>
               <tr>
                 <th class="text-left" style="width:70%">Name
-                <v-btn color="orange" left small text to="/addNew">
+                <v-btn color="grey" left small text to="/addNew">
                     <v-icon>add</v-icon> <span style="padding:0 10px;">Add item</span>
                 </v-btn> 
                 </th>
@@ -41,18 +41,18 @@
                 <td>{{ item.price }}</td>
                 <td>
                   <v-btn small text v-on:click="addToBasket(item)">
-                    <v-icon color="orange">add_box</v-icon>
+                    <v-icon color="grey">add_box</v-icon>
                   </v-btn>
                 </td>
                 <td>
                     <v-btn small text @click.stop="dialog = true"
                      @click="editItem(item)"> 
-                        <v-icon color="orange">edit</v-icon>
+                        <v-icon color="grey darken-1">edit</v-icon>
                     </v-btn>
                 </td>
                 <td>
                     <v-btn small text @click="deleteItem(item.id)">
-                        <v-icon color="incomplete">delete</v-icon>
+                        <v-icon color="grey darken-3">delete</v-icon>
                     </v-btn>
                 </td>
               </tr>
@@ -74,20 +74,20 @@
             <tbody>
               <tr v-for="item in basket" :key="item.name">
                 <td>
-                  <v-icon color="orange" @click="increaseQtn(item)">add_box</v-icon>
+                  <v-icon color="grey" @click="increaseQtn(item)">add_box</v-icon>
                   {{ item.quantity }}
-                  <v-icon color="orange" @click="decreaseQtn(item)">indeterminate_check_box</v-icon>
+                  <v-icon color="grey" @click="decreaseQtn(item)">indeterminate_check_box</v-icon>
                 </td>
                 <td>{{ item.name }}</td>
                 <td>{{item.price}}</td>
                 <td>
                   <v-btn small text @click.stop="dialog =true" >
-                    <v-icon color="orange">edit</v-icon>
+                    <v-icon color="grey darken-2">edit</v-icon>
                   </v-btn>
                 </td>
                 <td>
                   <v-btn small text @click="deleteItem(item.id)">
-                    <v-icon color="incomplete">delete</v-icon>
+                    <v-icon color="grey darken-4">delete</v-icon>
                   </v-btn>
                 </td>
               </tr>
@@ -115,7 +115,7 @@
           </v-row>
           <v-row style="margin:0;">
             <v-spacer></v-spacer>
-            <v-btn color="orange">Checkout</v-btn>
+            <v-btn color="grey lighten-3">Checkout</v-btn>
           </v-row>
         </div>
       </v-col>

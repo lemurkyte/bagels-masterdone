@@ -54,9 +54,9 @@
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
       
       <v-toolbar-title to="/" class="headline">
-
+         <router-link to="/home" >
         <span>HOME FRAGRANCES</span>
-       
+           </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn text class="hidden-sm-and-down"  to="/">Home</v-btn>
@@ -166,7 +166,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+a {  text-decoration: none;}
 
 .v-btn:before{
 background-color: white;

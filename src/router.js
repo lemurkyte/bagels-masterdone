@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Admin from './views/Admin.vue'
 import Orders from './views/Orders.vue'
 import Basket from './views/Basket.vue'
+import Detail from './components/Detail'
 import AddNewItems from './components/admin/AddNewItems.vue'
 import Login from './components/admin/Login.vue'
 
@@ -27,7 +28,11 @@ const router = new Router({
       name: 'home',
       component: Home
     },
-  
+    {
+      path: '/product-details',
+      name: 'Detail',
+      component: Detail
+    },
     {
       path: '/basket',
       name: 'basket',
