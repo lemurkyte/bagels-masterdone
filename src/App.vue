@@ -5,7 +5,7 @@
     <v-content  fluid id>
       <v-container  fluid id>
         <router-view></router-view>
-  
+      <Detail />
       <Footer />
       </v-container>
     </v-content>
@@ -17,11 +17,12 @@
 
 import Navigation from './components/Navigation.vue';
 import Footer from './components/Footer.vue';
-
+import Detail from './components/Detail.vue'
 
   export default {
      components: {
      Navigation,
+     Detail,
      Footer
   },
     name: 'App',

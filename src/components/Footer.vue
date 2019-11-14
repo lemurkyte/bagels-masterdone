@@ -81,9 +81,9 @@ and service(s). Company Name does not knowingly collect information from
         </v-card-actions>
       </v-card>
     </v-dialog>
- 
-      <v-spacer></v-spacer>
-       <span > &copy;Copyright: Home Fragrances &nbsp; 2019</span>
+ >
+            <v-spacer></v-spacer>
+          	  <span > &copy;Copyright: Home Fragrances &nbsp; 2019</span>
     
   </v-container>
  </template>
@@ -101,7 +101,49 @@ and service(s). Company Name does not knowingly collect information from
  
 
 <style lang="scss" scoped>
+
 #bg {
-  background-color: rgb(233, 233, 233);
+background-color: rgb(231, 231, 231);
 }
+h3{
+font-size: 25.5px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2px;
+  color: #161616;
+  text-transform: uppercase;
+}
+hr {
+    color: #1a1a1a;
+}
+a {font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #181818;
+  text-decoration: none;
+ }
+ p {font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #161616;
+  text-decoration: none;
+ }
+ span {
+   font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: rgb(20, 20, 20);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 200;
+  
+ }
 </style>

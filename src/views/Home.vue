@@ -19,9 +19,8 @@
                 </td>
                 <td>{{ item.price }} DKK</td>
                 <td>
-                  <v-btn small  v-on:click="addToBasket(item)">ADD TO CART  <br>
+                  <v-btn small text v-on:click="addToBasket(item)">ADD TO CART  <br>
                     <v-icon color="black">shopping_cart</v-icon> 
-                    
                   </v-btn>
                 </td>
               </tr>

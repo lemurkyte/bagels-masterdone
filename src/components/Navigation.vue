@@ -44,8 +44,7 @@
           <v-icon color="complete">assignment</v-icon>Orders
         </router-link>
         <router-link tag="li" to="/basket">
-          <v-icon  color="inprogress">shopping_cart 
-            </v-icon>Basket
+          <v-icon color="inprogress">shopping_cart</v-icon>Basket
         </router-link>
        </v-list-tile>
      </v-list>
